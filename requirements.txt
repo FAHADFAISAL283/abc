@@ -7,4 +7,4 @@ uuid
 pymongo
 pandas
 uvicorn
-sklearn
+scikit-learn
