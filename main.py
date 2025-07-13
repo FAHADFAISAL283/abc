@@ -7,7 +7,7 @@ from calorie_burn import estimate_calories_burned
 
 from pydantic import BaseModel 
 from motor.motor_asyncio import AsyncIOMotorClient   #to interact with mongoDB
-from datetime import datetime, UTC
+from datetime import datetime, timedelta
 from uuid import uuid4   #gives a 129 bit unique id for each convo 8,4,4,4,12 format in hexadecimal
 
 client = AsyncIOMotorClient("mongodb+srv://fahad:fahad_123@cluster0.bwyuy.mongodb.net/test?retryWrites=true&w=majority&appName=Cluster0")
