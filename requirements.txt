@@ -1,0 +1,10 @@
+fastapi
+typing
+pydantic
+motor
+datetime
+uuid
+pymongo
+pandas
+uvicorn
+sklearn
