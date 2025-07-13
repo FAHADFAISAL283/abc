@@ -327,29 +327,4 @@ async def estimate_goal_duration(uid: str):
         "message": f"You will reach your goal by {formatted_date}."
     }
 
-#new addition
-class QuestionnaireData(BaseModel):
-    UID: str
-    Email: str
-    Gender: str
-    Age: int
-    Height: float
-    Weight: int
-    BMI: float
-    BMI_Case: str
-    Activity_Level: str
-    Goals: str
-    Target_Weight: int
-    Preference: str
-    BMR: float
-    Total_Calorie_Intake: float
-    Required_Calories: float
 
-@app.post("/save_questionnaire")
-async def save_questionnaire(data: QuestionnaireData):
-    try:
-        doc = data.dict()
-        await questionnaire_collection.insert_one(doc)
-        return {"status": "success", "message": "Data saved"}
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
